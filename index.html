@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>华信智原首页</title>
+		<link rel="stylesheet" type="text/css" href="css/header.css"/>
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+		<script src="js/jquery.js"></script>
+	</head>
+	<body>
+	<div id="app">
+		<div class="header">
+			<div class="logo"><a href="/"><img src="img/logo.jpg" alt="">DT人才培训基地（贵州）</a></div>
+			<div class="hdr">
+				<a href="javascript:void(0);" class="a1"><span>全国分公司</span></a>
+				<a href="javascript:;" class="a2" onclick="biaoDan()"><span>我要报名</span></a>
+				<div class="website-switch" style="display: none;">
+					<span v-for="item in items"><a :href="item.url">{{item.Province}}</a></span>	
+				</div>
+			</div>
+			<div class="nav">
+				<ul>
+					<li v-for="item in items" v-bind:class="{ on: item.isActive }">
+						<a>{{item.listbox}}</a>
+						<dl>
+							<dd v-for="list in item.lists"><a :href="list.url">{{list.list}}</a></dd>
+						</dl>
+					</li>				
+				</ul>
+			</div>
+			<div class="all_filter" id="all_filter" style="display: none;"></div>
+			<div class="form-div" style="display: none;">
+				<form action="" method="post">
+					<p>姓名：<input class="input" type="text" style="background-color: white;"></p>
+					<p>电话：<input class="input" type="text"></p>
+					<p>Q Q：<input class="input" type="text"></p>
+					<p>性别：
+						<input type="radio" name="sex" id="" value="男" /><label for="">男</label>
+						<input type="radio" name="sex" id="" value="女" /><label for="">女</label>
+					</p>
+					<p>课程：
+						<select class="input">
+							<option>java工程师</option>
+							<option>UI设计师</option>
+							<option>PHP工程师</option>
+							<option>大数据云计算架构师</option>
+							<option>网络营销</option>
+							<option>跨境电商</option>
+						</select>
+					</p>
+					<p>留言：<textarea class="text"></textarea></p>
+					<input type="button" value="提交"/>
+				</form>
+			</div>
+		</div>
+		
+		<div class="banner">
+			<ul class="containers" style="left: 0%;">
+				<li v-for="item in banners" :style="{backgroundImage: 'url('+item.url+')'}"><a :href="item.href"></a></li>
+			</ul>
+			<ul class="slick-dots"></ul>
+			<a href="javascript:void(0)" class="manipulate left" onclick="roll('right')"></a>
+			<a href="javascript:void(0)" class="manipulate right" onclick="roll('left')"></a>
+		</div>
+		
+		<div class="full">
+		<div class="gonggao w1200">
+			 <marquee direction="left">{{tex}}</marquee> 
+		</div>
+		<div class="pic w1200">
+			<ul>
+				<li>
+					<a href="" style="background-image:url(img/pic1-1.png) ;">
+						<h4>01</h4>
+						<p>小班教学<br>全程面授</p>
+					</a>
+				</li>
+				<li>
+					<a href="" style="background-image:url(img/pic1-2.png) ;">
+						<h4>02</h4>
+						<p>小班教学<br>全程面授</p>
+					</a>
+				</li>
+				<li>
+					<a href="" style="background-image:url(img/pic1-3.png) ;">
+						<h4>03</h4>
+						<p>小班教学<br>全程面授</p>
+					</a>
+				</li>
+				<li>
+					<a href="" style="background-image:url(img/pic1-4.png) ;">
+						<h4>04</h4>
+						<p>小班教学<br>全程面授</p>
+					</a>
+				</li>
+				<li>
+					<a href="" style="background-image:url(img/pic1-5.png) ;">
+						<h4>05</h4>
+						<p>小班教学<br>全程面授</p>
+					</a>
+				</li>
+			</ul>
+		</div>
+		</div>
+		<div class="kbxx w1200">
+			<h2>最新开班信息</h2>
+			<but-tiems v-for="list in lists" v-bind:key="list.id" v-bind:name="list.name" v-bind:time="list.time"></but-tiems>
+		</div>
+		<div class="" style="height: 200px;">
+			
+		</div>
+	</div>
+		<script type="text/javascript" src="js/vue_style.js"></script>
+		<script type="text/javascript" src="js/style.js"></script>
+		<script src="js/slick.js"></script>
+		<script type="text/javascript">
+			console.log()
+		</script>
+	</body>
+</html>
