@@ -52,7 +52,7 @@ var kbxx = new Vue({
 		{id:1,name:"java1820班",time:"2019-08-20"},
 		{id:2,name:"UI1820班",time:"2019-08-22"},
 		{id:3,name:"网络营销1819班",time:"2019-06-04"},
-		{id:4,name:"PHP1819班",time:"2019-5-10"}
+		{id:4,name:"PHP1819班",time:"2019-7-10"}
 		]
 	}
 })
