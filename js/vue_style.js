@@ -49,10 +49,10 @@ var kbxx = new Vue({
 	data:{
 		shijian:new Date(),
 		lists:[
-		{id:1,name:"java1820班",time:"2018-12-25"},
-		{id:2,name:"UI1820班",time:"2018-12-26"},
-		{id:3,name:"网络营销1819班",time:"2018-12-04"},
-		{id:4,name:"PHP1819班",time:"2018-12-10"}
+		{id:1,name:"java1820班",time:"2019-12-25"},
+		{id:2,name:"UI1820班",time:"2019-12-26"},
+		{id:3,name:"网络营销1819班",time:"2019-12-04"},
+		{id:4,name:"PHP1819班",time:"2019-12-10"}
 		]
 	}
 })
